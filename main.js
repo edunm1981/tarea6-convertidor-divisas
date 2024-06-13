@@ -11,4 +11,10 @@ const liQ = document.getElementById("q");
 const liMXN = document.getElementById("mxn");
 const liLPS = document.getElementById("lps");
 
+const TIPO_CAMBIO_DOLAR_COLONES = 514.26;
+const TIPO_CAMBIO_EURO_COLONES = 558.70;
+const TIPO_CAMBIO_QUETZAL_COLONES = 68.07;
+const TIPO_CAMBIO_MEXICO_COLONES = 425.15;
+const TIPO_CAMBIO_HONDURAS_COLONES = 21.44;
+
 
