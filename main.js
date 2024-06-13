@@ -55,3 +55,43 @@ liLPS.addEventListener('click', () => {
 });
 
 
+btnMonedaColones.addEventListener('click', () => {
+    const valorMoneda = inputValorMoneda.value; 
+
+    if(valorMoneda.length === 0 || parseInt(valorMoneda) < 0){ 
+        alert('El valor no es correcto');
+        return; 
+    }
+
+    const valorMonedaParseado = parseFloat(valorMoneda); 
+    
+    let result = 0;
+    
+    switch(monedaSeleccionada){
+        case 'USD':
+            result = valorMonedaParseado * TIPO_CAMBIO_DOLAR_COLONES;
+        break;
+
+        case 'EUR': 
+            result = valorMonedaParseado * TIPO_CAMBIO_EURO_COLONES;
+        break;
+
+        case 'Q': 
+            result = valorMonedaParseado * TIPO_CAMBIO_QUETZAL_COLONES;
+        break;
+
+        case 'MXN': 
+            result = valorMonedaParseado * TIPO_CAMBIO_MEXICO_COLONES;
+        break;
+
+        case 'LPS': 
+            result = valorMonedaParseado * TIPO_CAMBIO_HONDURAS_COLONES;
+        break;
+
+        default:
+            console.error('Moneda no controlada');
+            
+    }
+
+    inputValorColones.value = result.toFixed(2); 
+});
